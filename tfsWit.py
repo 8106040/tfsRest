@@ -33,5 +33,5 @@ revNum = getWit.json()["rev"]
 #oldDescription = getWit.json()["Sysyem.Description"]
 filedData = {"op":"test","path":"/rev","value": revNum}, {"op": "add", "path": "/fields/System.Description", "value": svnInfo}, {"op": "add", "path": "/fields/System.History", "value": svnChanged}
 
-#update work item filed
+#update work item filed 
 requests.patch(tfsCollection + tfsWit + apiVersion, data=json.dumps(filedData), headers=headers, auth=HTTPBasicAuth(tfsUser, tfsPass))
