@@ -21,7 +21,7 @@ svnInfo = svnInfo + "   %s" %i + "  SVN Rev:"+ svnRev + "  Comments:" + svnLog.s
 #init TFS connection
 tfsCollection = 'https://xhvso.visualstudio.com/DefaultCollection/'
 tfsProject = 'xhpiproj'
-tfsWit = '_apis/wit/workitems/' + svnLog.split(":")[0]
+tfsWit = '/_apis/wit/workitems/' + svnLog.split(":")[0]
 apiVersion = '?api-version=1.0'
 tfsUser = 'haxu'
 tfsPass = '!@#QWEasdzxc'
