@@ -29,7 +29,8 @@ headers = {'Content-Type': 'application/json-patch+json'}
 
 #get lastest rev number
 getWit = requests.get(tfsCollection + tfsWit + apiVersion, auth=HTTPBasicAuth(tfsUser, tfsPass))
-revNum = getWit.json()["rev"]
+#revNum = getWit.json()["rev"]
+getWit.json()['value'][0]['rev']
 #oldDescription = getWit.json()["Sysyem.Description"]
 filedData = {"op":"test","path":"/rev","value": revNum}, {"op": "add", "path": "/fields/System.Description", "value": svnInfo}, {"op": "add", "path": "/fields/System.History", "value": svnChanged}
 
